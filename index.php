@@ -12,23 +12,22 @@
 	      <div class="section group">
 
 	      	<?php
-	      	$getFpd = $pd->getFeaturedProduct();
-	      	if ($getFpd) {
-	      		while ($result = $getFpd->fetch_assoc()) { 
-	      
-	      			
-	      	?>
+$getFpd = $pd->getFeaturedProduct();
+if ($getFpd) {
+    while ($result = $getFpd->fetch_assoc()) {
+
+        ?>
 
 				<div class="grid_1_of_4 images_1_of_4">
 					 <a href="details.php?proid=<?php echo $result['productId']; ?>"><img src="admin/<?php echo $result['image']; ?>" alt="" /></a>
 					 <h2><?php echo $result['productName']; ?></h2>
-					 <p><?php echo $fm->textShorten($result['body'],60); ?></p>
-					 <p><span class="price">TK.<?php echo $result['price']; ?></span></p>
+					 <p><?php echo $fm->textShorten($result['body'], 60); ?></p>
+					 <p><span class="price">Rs.<?php echo $result['price']; ?></span></p>
 				     <div class="button"><span><a href="details.php?proid=<?php echo $result['productId']; ?>" class="details">Details</a></span></div>
 				</div>
-				
-				<?php } } ?>
-				
+
+				<?php }}?>
+
 			</div>
 			<div class="content_bottom">
     		<div class="heading">
@@ -40,21 +39,20 @@
 
 
 	      	<?php
-	      	$getNpd = $pd->getNewProduct();
-	      	if ($getNpd) {
-	      		while ($result = $getNpd->fetch_assoc()) { 
-	      			
-	      
-	      	?>
+$getNpd = $pd->getNewProduct();
+if ($getNpd) {
+    while ($result = $getNpd->fetch_assoc()) {
+
+        ?>
 
 				<div class="grid_1_of_4 images_1_of_4">
 					 <a href="details.php?proid=<?php echo $result['productId']; ?>"><img class="img1" src="admin/<?php echo $result['image']; ?>" /></a>
 					 <h2><?php echo $result['productName']; ?></h2>
-					 <p><span class="price">TK.<?php echo $result['price']; ?></span></p>
+					 <p><span class="price">Rs.<?php echo $result['price']; ?></span></p>
 				     <div class="button"><span><a href="details.php?proid=<?php echo $result['productId']; ?>" class="details">Details</a></span></div>
 				</div>
-				<?php } } ?>
-		
+				<?php }}?>
+
 			</div>
     </div>
  </div>

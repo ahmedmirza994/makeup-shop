@@ -36,7 +36,6 @@
 					<h4>Contact</h4>
 						<ul>
 							<li><span>+88-01622425286</span></li>
-							<li><span>+88-01762100187</span></li>
 						</ul>
 						<div class="social-icons">
 							<h4>Follow Us</h4>
@@ -58,7 +57,7 @@
 			</div>
 			
 			<div class="copy_right">
-				<p>Sup online shopping &amp; All rights Reseverd </p>
+				<p>Desire Makeup Store &amp; All rights Reseverd </p>
 		   </div>
      </div>
     </div>

@@ -1,13 +1,13 @@
 <?php include 'inc/header.php';?>
 
-<?php 
+<?php
 $login = Session::get("cuslogin");
 if ($login == false) {
-	header("Location:login.php");
+    header("Location:login.php");
 }
- ?>
+?>
 <style>
-	
+
 table.tblone img{height: 90px;width: 100px;}
 
 </style>
@@ -15,7 +15,7 @@ table.tblone img{height: 90px;width: 100px;}
 
  <div class="main">
     <div class="content">
-    	<div class="cartoption">		
+    	<div class="cartoption">
 			<div class="cartpage">
 			    	<h2>Compare</h2>
 
@@ -31,26 +31,26 @@ table.tblone img{height: 90px;width: 100px;}
 							</tr>
 							<tr>
 
-							<?php 
-							$cmrId = Session::get("cmrId");
-							$getPd = $pd->getCompareData($cmrId);
-							if ($getPd) {
-								$i = 0;
-								while ($result = $getPd->fetch_assoc()) {
-								
-								$i++;
+							<?php
+$cmrId = Session::get("cmrId");
+$getPd = $pd->getCompareData($cmrId);
+if ($getPd) {
+    $i = 0;
+    while ($result = $getPd->fetch_assoc()) {
 
-							 ?>
-								<td><?php echo $i;?></td>
+        $i++;
+
+        ?>
+								<td><?php echo $i; ?></td>
 								<td><?php echo $result['productName']; ?></td>
-								<td>TK. <?php echo $result['price']; ?></td>
+								<td>Rs. <?php echo $result['price']; ?></td>
 								<td><img src="admin/<?php echo $result['image']; ?>" alt=""/></td>
 								<td><a href="details.php?proid=<?php echo $result['productId']; ?>">View</a></td>
-								
+
 							</tr>
 
 
-						<?php } } ?>	
+						<?php }}?>
 						</table>
 
 					</div>
@@ -59,7 +59,7 @@ table.tblone img{height: 90px;width: 100px;}
 							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
 						</div>
 					</div>
-    	</div>  	
+    	</div>
        <div class="clear"></div>
     </div>
  </div>

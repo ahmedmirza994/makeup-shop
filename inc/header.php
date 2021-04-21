@@ -29,7 +29,7 @@ header("Cache-Control: max-age=2592000");
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-<title>Sup online shopping</title>
+<title>Desire Makeup Store</title>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -92,9 +92,9 @@ $getData = $ct->checkCartTable();
 if ($getData) {
     $sum = Session::get("sum");
     $qty = Session::get("qty");
-    echo "TK." . $sum . " qty: " . $qty;
+    echo "Rs." . $sum . " Qty: " . $qty;
 } else {
-    echo "(Empty)";
+    echo "";
 }
 ?>
 								</span>

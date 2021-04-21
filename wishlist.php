@@ -1,22 +1,22 @@
 <?php include 'inc/header.php';?>
 
 
-<?php 
+<?php
 $login = Session::get("cuslogin");
 if ($login == false) {
-	header("Location:login.php");
+    header("Location:login.php");
 }
- ?>
+?>
 <?php
 if (isset($_GET['delwlistid'])) {
-	$productId = $_GET['delwlistid'];
-	$delwlist = $pd->delWlistData($cmrId, $productId);
+    $productId = $_GET['delwlistid'];
+    $delwlist = $pd->delWlistData($cmrId, $productId);
 }
 ?>
 
  <div class="main">
     <div class="content">
-    	<div class="cartoption">		
+    	<div class="cartoption">
 			<div class="cartpage">
 			    	<h2>Wishlist</h2>
 
@@ -32,29 +32,29 @@ if (isset($_GET['delwlistid'])) {
 							</tr>
 							<tr>
 
-							<?php 
-							$getPd = $pd->checkWlistData($cmrId);
-							if ($getPd) {
-								$i = 0;
-								while ($result = $getPd->fetch_assoc()) {
-								
-								$i++;
+							<?php
+$getPd = $pd->checkWlistData($cmrId);
+if ($getPd) {
+    $i = 0;
+    while ($result = $getPd->fetch_assoc()) {
 
-							 ?>
-								<td><?php echo $i;?></td>
+        $i++;
+
+        ?>
+								<td><?php echo $i; ?></td>
 								<td><?php echo $result['productName']; ?></td>
-								<td>TK. <?php echo $result['price']; ?></td>
+								<td>Rs. <?php echo $result['price']; ?></td>
 								<td><img src="admin/<?php echo $result['image']; ?>" alt=""/></td>
 								<td>
 									<a href="details.php?proid=<?php echo $result['productId']; ?>">Buy Now</a> ||
 
 									<a href="?delwlistid=<?php echo $result['productId']; ?>">Remove</a>
 								</td>
-								
+
 							</tr>
 
 
-						<?php } } ?>	
+						<?php }}?>
 						</table>
 
 					</div>
@@ -63,7 +63,7 @@ if (isset($_GET['delwlistid'])) {
 							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
 						</div>
 					</div>
-    	</div>  	
+    	</div>
        <div class="clear"></div>
     </div>
  </div>

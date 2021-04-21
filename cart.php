@@ -1,46 +1,46 @@
 <?php include 'inc/header.php';?>
 
-<?php 
+<?php
 if (isset($_GET['delpro'])) {
-	$delId = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
-	$delProduct = $ct->delProductByCart($delId);
+    $delId = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
+    $delProduct = $ct->delProductByCart($delId);
 }
 
- ?>
+?>
 
-<?php 
+<?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cartId = $_POST['cartId'];
     $quantity = $_POST['quantity'];
-    $updateCart = $ct->updateCartQuantity($cartId,$quantity);
+    $updateCart = $ct->updateCartQuantity($cartId, $quantity);
 
-    if ($quantity <=0) {
-    	$delProduct = $ct->delProductByCart($cartId);
+    if ($quantity <= 0) {
+        $delProduct = $ct->delProductByCart($cartId);
     }
 }
- ?>
- <?php  
+?>
+ <?php
 if (!isset($_GET['id'])) {
-	echo "<meta http-equiv = 'refresh' content ='0;URL=?id=nayem' />";
+    echo "<meta http-equiv = 'refresh' content ='0;URL=?id=nayem' />";
 }
- ?>
+?>
 
 
  <div class="main">
     <div class="content">
-    	<div class="cartoption">		
+    	<div class="cartoption">
 			<div class="cartpage">
 			    	<h2>Your Cart</h2>
-			    	<?php 
-			    	if (isset($updateCart)) {
-			    		echo $updateCart;
-			    	}
+			    	<?php
+if (isset($updateCart)) {
+    echo $updateCart;
+}
 
-			    	if (isset($delProduct)) {
-			    		echo $delProduct;
-			    	}
-			    	 ?>
+if (isset($delProduct)) {
+    echo $delProduct;
+}
+?>
 
 						<table class="tblone">
 
@@ -56,22 +56,22 @@ if (!isset($_GET['id'])) {
 							</tr>
 							<tr>
 
-							<?php 
+							<?php
 
-							$getPro = $ct->getCartProduct();
-							if ($getPro) {
-								$i = 0;
-								$sum = 0;
-								$qty = 0;
-								while ($result = $getPro->fetch_assoc()) {
-								
-								$i++;
+$getPro = $ct->getCartProduct();
+if ($getPro) {
+    $i = 0;
+    $sum = 0;
+    $qty = 0;
+    while ($result = $getPro->fetch_assoc()) {
 
-							 ?>
-								<td><?php echo $i;?></td>
+        $i++;
+
+        ?>
+								<td><?php echo $i; ?></td>
 								<td><?php echo $result['productName']; ?></td>
 								<td><img src="admin/<?php echo $result['image']; ?>" alt=""/></td>
-								<td>Tk. <?php echo $result['price']; ?></td>
+								<td>Rs. <?php echo $result['price']; ?></td>
 					<td>
 						<form action="" method="post">
 
@@ -81,36 +81,36 @@ if (!isset($_GET['id'])) {
 						</form>
 					</td>
 								<td>
-							Tk. <?php
-						$total = $result['price'] * $result['quantity'];
-						echo $total;
-						 ?>
-							
+							Rs. <?php
+$total = $result['price'] * $result['quantity'];
+        echo $total;
+        ?>
+
 
 									</td>
 								<td><a onclick="return confirm('Are you Sure to Delete!')" href="?delpro=<?php echo $result['cartId']; ?>">X</a></td>
 							</tr>
-							
-							<?php 
-							$qty = $qty + $result['quantity'];
-							$sum = $sum + $total;
-							Session::set("qty",$qty);
-							Session::set("sum",$sum);
-							 ?>
+
+							<?php
+$qty = $qty + $result['quantity'];
+        $sum = $sum + $total;
+        Session::set("qty", $qty);
+        Session::set("sum", $sum);
+        ?>
 
 
-						<?php } } ?>	
+						<?php }}?>
 						</table>
 
 						<?php
-						$getData = $ct->checkCartTable();
-							if ($getData){
+$getData = $ct->checkCartTable();
+if ($getData) {
 
-								?>
+    ?>
 						<table style="float:right;text-align:left;" width="40%">
 							<tr>
 								<th>Sub Total : </th>
-								<td>TK. <?php echo $sum; ?></td>
+								<td>Rs. <?php echo $sum; ?></td>
 							</tr>
 							<tr>
 								<th>VAT : </th>
@@ -118,20 +118,20 @@ if (!isset($_GET['id'])) {
 							</tr>
 							<tr>
 								<th>Grand Total :</th>
-								<td>TK. 
-									<?php 
-									$vat = $sum * 0.1;
-									$gtotal = $sum + $vat;
-									echo $gtotal;
-									 ?>
+								<td>Rs.
+									<?php
+$vat = $sum * 0.1;
+    $gtotal = $sum + $vat;
+    echo $gtotal;
+    ?>
 								</td>
 							</tr>
 
 					   </table>
-					<?php }else{
-						header("Location:index.php");
-						//echo "Cart Empty ! Please Shop Now...";
-					} ?>
+					<?php } else {
+    header("Location:index.php");
+    //echo "Cart Empty ! Please Shop Now...";
+}?>
 					</div>
 					<div class="shopping">
 						<div class="shopleft">
@@ -141,7 +141,7 @@ if (!isset($_GET['id'])) {
 							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
 						</div>
 					</div>
-    	</div>  	
+    	</div>
        <div class="clear"></div>
     </div>
  </div>
