@@ -72,7 +72,7 @@ header("Cache-Control: max-age=2592000");
   <div class="wrap">
 		<div class="header_top">
 			<div class="logo">
-				<a href="index.php"><img src="images/logo1.png" alt="" /></a>
+				<a href="index.php"><img src="images/logo.png" alt="Desire Makeup Store" height = "100px" /></a>
 			</div>
 			  <div class="header_top_right">
 			    <div class="search_box">

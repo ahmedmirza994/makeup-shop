@@ -17,7 +17,7 @@ if (!isset($search) || $search == null) {
     <div class="content">
     	<div class="content_top">
     		<div class="heading">
-    		<h3>All Searching Product</h3>
+    		<h3>Searched Products</h3>
     		</div>
     		<div class="clear"></div>
     	</div>
@@ -44,7 +44,7 @@ if ($post) {
 				</div>
 				<?php }} else {?>
 
-					<p style="color: red;font-size: 35px;font-weight: bold;text-align: center;">Your Seaech Query not found !!.</p>
+					<p style="color: #2b013b;font-size: 35px;font-weight: normal;text-align: center; margin-top: 35px">Products not found.</p>
 				<?php }?>
 
 

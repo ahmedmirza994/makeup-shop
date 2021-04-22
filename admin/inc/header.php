@@ -65,7 +65,7 @@ header("Cache-Control: max-age=2592000");
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="img/newlogo.png" alt="Logo" />
+                    <img src="img/logo.png" alt="Desire Makeup Store" height="100px" />
 				</div>
 				<div class="floatleft middle">
 					<h1>Online shopping dashboard</h1>

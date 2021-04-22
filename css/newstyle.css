@@ -191,10 +191,11 @@ body {
 
 .success {
   font-size: 18px;
-  color: green;
+  color: #570c43;
 }
 .error {
   font-size: 18px;
+  margin-top: 8px;
   color: red;
 }
 /**** Header Top Right ****/
@@ -699,7 +700,7 @@ button.grey:hover,
 }
 .content h2 {
   font-size: 23px;
-  color: #6c6c6c;
+  color: #2b013b;
   font-family: "Monda", sans-serif;
 }
 .content_top {
@@ -1114,7 +1115,7 @@ button.grey:hover,
 .span_3_of_2 h2 {
   font-family: "Monda", sans-serif;
   font-size: 1.1em;
-  color: #cc3636;
+  color: #2b013b;
   font-weight: normal;
   margin-top: 0px;
   text-transform: uppercase;
@@ -1129,13 +1130,13 @@ button.grey:hover,
 .price p {
   font-size: 0.8125em;
   padding: 1.5% 1%;
-  color: #666;
+  color: #2b013b;
   vertical-align: top;
 }
 .price p span {
   font-size: 1.5em;
   font-family: "Monda", sans-serif;
-  color: #cc3636;
+  color: #570c43;
 }
 .available {
   padding: 10px 0;
@@ -1198,7 +1199,7 @@ button.grey:hover,
 .product-desc h2,
 .product-tags h2 {
   padding: 8px 20px;
-  background: #602d8d;
+  background: #2b013b;
   border: 1px solid #ebe8e8;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1213,7 +1214,7 @@ button.grey:hover,
 .product-desc p {
   font-size: 0.8em;
   padding: 0.3em 0;
-  color: #969696;
+  color: #570c43;
   line-height: 1.6em;
   font-family: verdana, arial, helvetica, helve, sans-serif;
 }
@@ -1531,7 +1532,7 @@ button.grey:hover,
 }
 .support_desc h3 {
   font-size: 30px;
-  color: #6c6c6c;
+  color: #2b013b;
   padding: 5px 0;
   font-family: "Monda", sans-serif;
 }
@@ -1607,7 +1608,7 @@ button.grey:hover,
   width: 100%;
 }
 .tblone th {
-  background: #666 none repeat scroll 0 0;
+  background: #570c43 none repeat scroll 0 0;
   color: #fff;
   font-size: 20px;
   padding: 5px 8px;
@@ -1623,7 +1624,7 @@ table.tblone tr:nth-child(2n + 1) {
   height: 30px;
 }
 table.tblone tr:nth-child(2n) {
-  background: #fdf0f1;
+  background: #f1eefd;
   height: 30px;
 }
 table.tblone input[type="number"] {
@@ -1632,16 +1633,16 @@ table.tblone input[type="number"] {
   width: 60px;
 }
 table.tblone input[type="submit"] {
-  background: #333 none repeat scroll 0 0;
-  border: 1px solid #000;
+  background: #570c43 none repeat scroll 0 0;
+  border: 1px solid #570c43;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
-  padding: 1px 5px;
+  padding: 8px 15px;
 }
 table.tblone a {
-  color: #fe5800;
+  color: #570c43;
   font-weight: bold;
   text-decoration: none;
 }
@@ -1712,14 +1713,19 @@ table.tblone img {
 .contact-form input[type="submit"] {
   padding: 7px 25px;
   cursor: pointer;
-  background: #fff url(../images/large-button-overlay.png);
+  background: #570c43;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   right: 0;
-  border: 1px solid #ccc;
-  color: #555 !important;
+  border: 1px solid #570c43;
+  border-radius: 8px;
+  color: #fff !important;
   font-size: 1em;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .contact-form input[type="submit"]:hover {
   background-color: #eee;
@@ -2729,7 +2735,7 @@ table.tblone img {
 }
 
 .buysubmit {
-  background: #602d8d url(../images/large-button-overlay.png) repeat scroll 0 0;
+  background: #570c43 url(../images/large-button-overlay.png) repeat scroll 0 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   color: #fff;

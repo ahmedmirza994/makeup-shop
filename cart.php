@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
  <?php
 if (!isset($_GET['id'])) {
-    echo "<meta http-equiv = 'refresh' content ='0;URL=?id=nayem' />";
+    echo "<meta http-equiv = 'refresh' content ='0;URL=?id=ar' />";
 }
 ?>
 
@@ -88,7 +88,7 @@ $total = $result['price'] * $result['quantity'];
 
 
 									</td>
-								<td><a onclick="return confirm('Are you Sure to Delete!')" href="?delpro=<?php echo $result['cartId']; ?>">X</a></td>
+								<td><a onclick="return confirm('Are you sure to delete?')" href="?delpro=<?php echo $result['cartId']; ?>">X</a></td>
 							</tr>
 
 							<?php
@@ -130,7 +130,6 @@ $vat = $sum * 0.1;
 					   </table>
 					<?php } else {
     header("Location:index.php");
-    //echo "Cart Empty ! Please Shop Now...";
 }?>
 					</div>
 					<div class="shopping">
@@ -138,7 +137,7 @@ $vat = $sum * 0.1;
 							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
 						</div>
 						<div class="shopright">
-							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
+							<a href="paymentoffline.php"> <img src="images/check.png" alt="" /></a>
 						</div>
 					</div>
     	</div>

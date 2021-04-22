@@ -22,7 +22,7 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'Order') {
 .tbltwo{float: right;text-align: left;width: 60%;border: 2px solid #ddd;margin-right: 14px;margin-top: 12px;}
 .tbltwo tr td{text-align: justify;padding: 5px 10px;}
 .ordernow{padding-bottom: 30px;}
-.ordernow a{width: 200px;margin: 20px auto 0;text-align: center;padding: 5px;font-size: 30px;display: block;background: #ff0000;color: #fff;border-radius: 3px;}
+.ordernow a{width: 200px;margin: 20px auto 0;text-align: center;padding: 5px;font-size: 30px;display: block;background: #570c43;color: #fff;border-radius: 3px;}
 </style>
 
  <div class="main">

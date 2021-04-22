@@ -101,12 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<div class="col span_1_of_3">
       			<div class="company_address">
 				     	<h2>Company Information :</h2>
-						    	<p>344 East-Goran,</p>
-						   		<p>Khilgaon,Dhaka-1219,</p>
-						   		<p>Bangladesh</p>
-				   		<p>Mobile:01622425286</p>
-				   		<p>Phone: 0176210187</p>
-				 	 	<p>Email: <span>nayemhowlader77@gmial.com</span></p>
+						    	<p>Sheikhpura, Pakistan</p>
+				   		<p>Mobile: 090078601</p>
+				 	 	<p>Email: <span>aromarai98@gmail.com</span></p>
 				   		<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
 				   </div>
 				 </div>

@@ -34,7 +34,7 @@ class Customer
 
         if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == "" || $phone == "" || $email == "" || $pass == "") {
 
-            $msg = "<span class='error'>Fields must not be empty !</span>";
+            $msg = "<span class='error'>Fields must not be empty.</span>";
             return $msg;
         }
 
@@ -49,10 +49,10 @@ class Customer
 
             $inserted_row = $this->db->insert($query);
             if ($inserted_row) {
-                $msg = "<span class='success'>Customer Data inserted Successfully.</span>";
+                $msg = "<span class='success'>Profile created!</span>";
                 return $msg;
             } else {
-                $msg = "<span class='error'>Customer Data Not inserted.</span>";
+                $msg = "<span class='error'>Ops, There is a problem. Try again later..</span>";
                 return $msg;
             }
         }
@@ -63,7 +63,7 @@ class Customer
         $email = mysqli_real_escape_string($this->db->link, $data['email']);
         $pass = mysqli_real_escape_string($this->db->link, md5($data['pass']));
         if (empty($email) || empty($pass)) {
-            $msg = "<span class='error'>Fields must not be empty !</span>";
+            $msg = "<span class='error'>Fields must not be empty.</span>";
             return $msg;
         }
         $query = "SELECT * FROM tbl_customer WHERE email = '$email' AND pass = '$pass'";
@@ -76,7 +76,7 @@ class Customer
             header("Location:cart.php");
 
         } else {
-            $msg = "<span class='error'>Email or Password not matched !</span>";
+            $msg = "<span class='error'>Email or password not matched.</span>";
             return $msg;
         }
     }
@@ -101,7 +101,7 @@ class Customer
 
         if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == "" || $phone == "" || $email == "") {
 
-            $msg = "<span class='error'>Fields must not be empty !</span>";
+            $msg = "<span class='error'>Fields must not be empty.</span>";
             return $msg;
         } else {
 
@@ -122,10 +122,10 @@ class Customer
 
             $updated_row = $this->db->update($query);
             if ($updated_row) {
-                $msg = "<span class='success'>Customer Data Updated Successfully.</span>";
+                $msg = "<span class='success'>Profile created!</span>";
                 return $msg;
             } else {
-                $msg = "<span class='error'>Customer Data Not Updated !</span>";
+                $msg = "<span class='error'>Profile updated!</span>";
                 return $msg;
             }
         }
