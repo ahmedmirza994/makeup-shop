@@ -37,7 +37,7 @@ class Adminlogin
 
         if (empty($adminUser) || empty($adminPassword)) {
 
-            $loginmsg = "Username or Password must not be empty !";
+            $loginmsg = "Username or password must not be empty !";
             return $loginmsg;
         } else {
 
@@ -56,7 +56,7 @@ class Adminlogin
 
                 header("Location:dashboard.php");
             } else {
-                $loginmsg = "Username or Password not match !";
+                $loginmsg = "Invalid credentials";
                 return $loginmsg;
             }
 

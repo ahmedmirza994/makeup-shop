@@ -41,7 +41,7 @@ if (isset($loginchk)) {
 			</div>
 		</form><!-- form -->
 		<div class="button">
-			<a href="#">Online shopping</a>
+			<a href="#">Desire Makeup Store</a>
 		</div><!-- button -->
 	</section><!-- content -->
 </div><!-- container -->

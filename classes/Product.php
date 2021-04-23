@@ -249,31 +249,6 @@ WHERE p.catId = c.catId AND p.brandId = b.brandId AND p.productId = '$id'";
         return $result;
     }
 
-    public function latestFromIphone()
-    {
-        $query = "SELECT * FROM tbl_product WHERE brandId = '4' ORDER BY productId DESC LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
-    }
-    public function latestFromSamsung()
-    {
-        $query = "SELECT * FROM tbl_product WHERE brandId = '2' ORDER BY productId DESC LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
-    }
-    public function latestFromAcer()
-    {
-        $query = "SELECT * FROM tbl_product WHERE brandId = '5' ORDER BY productId DESC LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
-    }
-    public function latestFromCanon()
-    {
-        $query = "SELECT * FROM tbl_product WHERE brandId = '3' ORDER BY productId DESC LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
-    }
-
     public function productByCat($id)
     {
         $catId = mysqli_real_escape_string($this->db->link, $id);
@@ -373,33 +348,33 @@ WHERE p.catId = c.catId AND p.brandId = b.brandId AND p.productId = '$id'";
         $delete = $this->db->delete($query);
     }
 
-    public function getTopbrandAcer()
+    public function getTopBrandHudaBeauty()
     {
 
-        $query = "SELECT * FROM tbl_product WHERE brandId = '5' ORDER BY productId DESC LIMIT 4";
+        $query = "SELECT * FROM tbl_product WHERE brandId = '7' ORDER BY productId DESC LIMIT 4";
         $result = $this->db->select($query);
         return $result;
     }
-    public function getTopbrandSamsung()
+    public function getTopBrandKashees()
     {
 
-        $query = "SELECT * FROM tbl_product WHERE brandId = '2' ORDER BY productId DESC LIMIT 4";
-        $result = $this->db->select($query);
-        return $result;
-    }
-
-    public function getTopbrandCanon()
-    {
-
-        $query = "SELECT * FROM tbl_product WHERE brandId = '3' ORDER BY productId DESC LIMIT 4";
+        $query = "SELECT * FROM tbl_product WHERE brandId = '10' ORDER BY productId DESC LIMIT 4";
         $result = $this->db->select($query);
         return $result;
     }
 
-    public function getTopbrandIphone()
+    public function getTopBrandJCharles()
     {
 
-        $query = "SELECT * FROM tbl_product WHERE brandId = '4' ORDER BY productId DESC LIMIT 4";
+        $query = "SELECT * FROM tbl_product WHERE brandId = '9' ORDER BY productId DESC LIMIT 4";
+        $result = $this->db->select($query);
+        return $result;
+    }
+
+    public function getTopBrandKylieJenner()
+    {
+
+        $query = "SELECT * FROM tbl_product WHERE brandId = '11' ORDER BY productId DESC LIMIT 4";
         $result = $this->db->select($query);
         return $result;
     }

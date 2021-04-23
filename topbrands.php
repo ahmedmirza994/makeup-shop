@@ -5,14 +5,14 @@
 
     <div class="content_top">
     		<div class="heading">
-    		<h3>Iphone<r/h3>
+    		<h3>Kylie Jenner<r/h3>
     		</div>
     		<div class="clear"></div>
     	</div>
 
 			<div class="section group">
             <?php
-$getTop4 = $pd->getTopbrandIphone();
+$getTop4 = $pd->getTopBrandKylieJenner();
 if ($getTop4) {
     while ($result = $getTop4->fetch_assoc()) {
 
@@ -30,14 +30,14 @@ if ($getTop4) {
 			</div>
     	<div class="content_top">
     		<div class="heading">
-    		<h3>Acer<r/h3>
+    		<h3>Huda Beauty<r/h3>
     		</div>
     		<div class="clear"></div>
     	</div>
 	      <div class="section group">
 
 	      	<?php
-$getTop1 = $pd->getTopbrandAcer();
+$getTop1 = $pd->getTopBrandHudaBeauty();
 if ($getTop1) {
     while ($result = $getTop1->fetch_assoc()) {
 
@@ -55,13 +55,13 @@ if ($getTop1) {
 			</div>
 		<div class="content_bottom">
     		<div class="heading">
-    		<h3>Samsung</h3>
+    		<h3>Kashees</h3>
     		</div>
     		<div class="clear"></div>
     	</div>
 			<div class="section group">
             <?php
-$getTop2 = $pd->getTopbrandSamsung();
+$getTop2 = $pd->getTopBrandKashees();
 if ($getTop2) {
     while ($result = $getTop2->fetch_assoc()) {
 
@@ -79,7 +79,7 @@ if ($getTop2) {
 			</div>
 	<div class="content_bottom">
     		<div class="heading">
-    		<h3>Canon</h3>
+    		<h3>James Charles</h3>
     		</div>
     		<div class="clear"></div>
     	</div>
@@ -87,7 +87,7 @@ if ($getTop2) {
 
 
 					<?php
-$getTop3 = $pd->getTopbrandCanon();
+$getTop3 = $pd->getTopBrandJCharles();
 if ($getTop3) {
     while ($result = $getTop3->fetch_assoc()) {
 

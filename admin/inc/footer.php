@@ -5,7 +5,7 @@
     </div>
     <div id="site_info">
         <p>
-         &copy; Copyright <a href="http://www.nayem.xyz">Sup online Shopping</a>. All Rights Reserved.
+         &copy; Copyright <a href="../">Desire Makeup Store</a>. All Rights Reserved.
         </p>
     </div>
 </body>

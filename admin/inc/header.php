@@ -68,8 +68,7 @@ header("Cache-Control: max-age=2592000");
                     <img src="img/logo.png" alt="Desire Makeup Store" height="100px" />
 				</div>
 				<div class="floatleft middle">
-					<h1>Online shopping dashboard</h1>
-					<p>Online Shopping url</p>
+					<h1>Desire makeup store dashboard</h1>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
@@ -101,9 +100,8 @@ if (isset($_GET['action']) && $_GET['action'] == "logout") {
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="dashboard.php"><span>Dashboard</span></a> </li>
-                <!-- <li class="ic-form-style"><a href=""><span>User Profile</span></a></li> -->
-				<!-- <li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li> -->
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
+				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
+				<li class="ic-grid-tables"><a href="inbox.php"><span>Orders</span></a></li>
                 <li class="ic-grid-tables"><a href="message.php"><span>Message
 
 
